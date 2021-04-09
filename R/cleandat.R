@@ -1,22 +1,7 @@
-## Creating a function for cleaning data from Statistics Bureau of Statistics
-# Form IV-9
+cleandat <- function(data){
 
-# Install
-# version of R is 1.4.1106
-# data.table (>= 1.4.1106),
-# readxl,
-# janitor,
-# tidyverse
-
-
-# load data from Statistics Bureau of Japan, IV-9 Tablulation
-
-library(tidyverse)
-library(readxl)
-library(janitor)
-
-cleandat = function(data){
-  code_book <- tribble(
+  # re-defining columns in excel file
+  code_book <- tibble::tribble(
     ~ var_code, ~var_label,
     "tot", "total one-person households",
     "t_lf", "total one-person households, in-labor force",
@@ -40,61 +25,41 @@ cleandat = function(data){
     "t_unemp", "total one-person households, in-labor force, unemployed persons",
     "not_lf", "total one-person households, in-labor force, not in labor force"
   )
-  read_xls(
-    path = data,
-    range = "H17:L62",
-    col_names = FALSE,
-    na = c("-")) %>%
-    clean_names() %>%
-    fill(x1) %>%
-    mutate(x1 = if_else(is.na(x1), "One-person household", x1),
-           x2 = case_when(
-             row_number() < 12 ~ "Both sexes",
-             row_number() < 23 ~ "Male",
-             row_number() < 34 ~ "Female"),
-           x4 = if_else(is.na(x5), x4, x5),
-           x4 = if_else(is.na(x3) | (x3 %in% c("Male", "Female")), x4, x3),
-           x4 = if_else(is.na(x4), "All ages", x4)
+
+  # read in excel file from Japan Stat. Bureau site, form IV-9 ----
+  readxl::read_xls(
+      path = data,
+      range = "H17:L62",
+      col_names = FALSE,
+      na = c("-")
     ) %>%
-    select(-x3, -x5) %>%
-    rename(
+    janitor::clean_names() %>%
+    tidyr::fill(x1) %>%
+    dplyr::mutate(
+      x1 = dplyr::if_else(is.na(x1), "One-person household", x1),
+      x2 = dplyr::case_when(
+        dplyr::row_number() < 12 ~ "Both sexes",
+        dplyr::row_number() < 23 ~ "Male",
+        dplyr::row_number() < 34 ~ "Female"
+        ),
+      x4 = dplyr::if_else(is.na(x5), x4, x5),
+      x4 = dplyr::if_else(is.na(x3) | (x3 %in% c("Male", "Female")), x4, x3),
+      x4 = dplyr::if_else(is.na(x4), "All ages", x4)
+    ) %>%
+    dplyr::select(-x3, -x5) %>%
+    dplyr::rename(
       household_type = x1,
       sex_grouping = x2,
-      age_grouping = x4)%>%
-    bind_cols(
-      read_xls(
+      age_grouping = x4
+      ) %>%
+    dplyr::bind_cols(
+     readxl::read_xls(
         path = data,
         range = "N17:AH62",
-        col_names = code_book %>% pull(var_code),
+        col_names = code_book %>% dplyr::pull(var_code),
         na = c("-")
       )
     )
 }
 
-data_tst <- cleandat("2019_Original.xls")
 
-
-#\name{jflp}
-#\alias{jflp}
-#\title{Organize Labor Data}
-#\usage{
-#  jflp(infile)
-#}
-#\arguments{
-# \item{infile}{Path to the input file}
-#}
-#\value{
-#  A matrix of the infile
-#}
-#\description{
- # This function downloading an excel file that has Japanese government-specific formatting.
- # This function provides code for a user to download an excel file from the Bureau and read
- # data into RStudio with ease, without original formatting providing a barrier to data analysis and visualizations.
-# }
-
-# to add package to my R library
-devtools::install(jflp)
-
-library("jflp")
-
-devtools::install_github("manycarter/jflp")

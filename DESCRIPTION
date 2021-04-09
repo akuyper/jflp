@@ -7,24 +7,16 @@ Authors@R:
            role = c("aut", "cre"),
            email = "manycarter10@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: The package provides a way of cleaning and organizing household labor data from Statistics Bureau of Japan. 
-It specifically examines the labor form IV-9 for the years 2007 to 2019.    
+Description: The package provides a way of cleaning and organizing household labor data from Statistics Bureau of Japan. It specifically examines the labor form IV-9 for the years 2007 to 2019.    
 License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
-
-
-
-
-# Imports:
-
-# version of R is 1.4.1106
-data.table (>= 1.4.1106),
-# required external packages 
-readxl,
-janitor,
-tidyverse
-
-# This function assumes that the file will meet the Japanese Bureau formatting of columns G through AH and rows 3 through 15. 
+Imports: 
+    dplyr,
+    janitor,
+    readxl,
+    tidyr,
+    tibble,
+    magrittr
