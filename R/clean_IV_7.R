@@ -75,7 +75,7 @@ clean_IV_7 <- function(data){
     hours_type = x6
   ) %>%
     dplyr::bind_cols(
-      read_xls(
+      readxl::read_xls(
         path = data,
         range = "Q17:AT46",
         col_names = code_book %>% dplyr::pull(var_code),
