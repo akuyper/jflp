@@ -78,7 +78,7 @@ clean_IV_7 <- function(data){
       read_xls(
         path = data,
         range = "Q17:AT46",
-        col_names = code_book_IV_7 %>% dplyr::pull(var_code),
+        col_names = code_book %>% dplyr::pull(var_code),
         na = c("-")
       )
     )

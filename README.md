@@ -21,9 +21,14 @@ This is a basic example which shows you how to solve a common problem: downloadi
 
 ``` r
 library(jflp)
+
+
 ## basic example code
 
-clean_dat(path = "~/Documents/Quarter 1, Year 4/STAT 399 - Honors Thesis/Data/Statistics Bureau of Japan/IV-9/2019_Original.xls", na = c("-"))
+clean_IV_9(data = "inst/data/2019_Original_IV_9.xls")
+
+clean_IV_7(data = "inst/data/2019_IV_7.xls")
+
 
 ```
 
