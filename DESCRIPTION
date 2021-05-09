@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "manycarter10@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: The package provides a way of cleaning and organizing household labor data from Statistics Bureau of Japan. It specifically examines the labor form IV-9 for the years 2007 to 2019.    
+Description: The package provides a way of cleaning and organizing household labor data from Statistics Bureau of Japan. It specifically examines the labor forms IV-9 and IV -7 for the years 2007 to 2019.    
 License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
