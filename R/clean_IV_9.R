@@ -21,7 +21,7 @@ clean_IV_9 <- function(data){
     "non_ag", "total one-person households, in-labor force, employed, non-agricultural industries",
     "non_ag_se", "total one-person households, in-labor force, non-agricultural industries, self-employed",
     "non_ag_fw", "total one-person households, in-labor force, non-agricultural industries, family worker",
-    "non_ag_enf", "total one-person households, in-labor force, non-agricultural industries, employee(self-employed)",
+    "non_ag_enf", "total one-person housetolds, in-labor force, non-agricultural industries, employee(self-employed)",
     "non_ag_14", "total one-person households, in-labor force, non-agricultural industries, 1-14 hours per week",
     "non_ag_15_34", "total one-person households, in-labor force, non-agricultural industries, 15-34 hours per week",
     "non_ag_29", "total one-person households, in-labor force, non-agricultural industries, 15-29 hours per week",

@@ -1,6 +1,11 @@
-
-# Package for IV-7 Form from Statistics Bureau database, showing weekly hours of work by husband and wife ----
-
+#' Package for IV-7 Form from Statistics Bureau database, showing weekly hours of work by husband and wife  - fix this
+#'
+#' @param data
+#'
+#' @return
+#' @export
+#'
+#' @examples
 clean_IV_7 <- function(data){
   # re-defining columns in excel file ----
   code_book <- tibble::tribble(
