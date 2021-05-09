@@ -9,10 +9,10 @@ The goal of jflp is to create a function that allows a user to download an excel
 
 ## Installation
 
-You can install the released version of jflp from [CRAN](https://CRAN.R-project.org) with:
+In order to install package `jflp`, use the code below to install from Github:
 
 ``` r
-install.packages("jflp")
+devtools::install_github("akuyper/jflp")
 ```
 
 ## Example
@@ -22,5 +22,8 @@ This is a basic example which shows you how to solve a common problem: downloadi
 ``` r
 library(jflp)
 ## basic example code
+
+clean_dat(path = "~/Documents/Quarter 1, Year 4/STAT 399 - Honors Thesis/Data/Statistics Bureau of Japan/IV-9/2019_Original.xls", na = c("-"))
+
 ```
 
