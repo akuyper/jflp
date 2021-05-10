@@ -1,8 +1,8 @@
-#' Package for IV-7 Form from Statistics Bureau database, showing weekly hours of work by husband and wife  - fix this
+#' Documentation for package ‘jflp’ version 0.0.0.9000 to read in Form IV-7
 #'
-#' @param data
+#' @param bureau_7
 #'
-#' @return
+#' @return tidied dataset
 #' @export
 #'
 #' @examples

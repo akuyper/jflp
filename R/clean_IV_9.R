@@ -1,8 +1,8 @@
-#' Reads in and organizes Form IV-9 from Japan's Statistics Bureau
+#' Documentation for package ‘jflp’ version 0.0.0.9000 to read in Form IV-9
 #'
-#' @param data
+#' @param bureau_9
 #'
-#' @return
+#' @return tidied dataset
 #' @export
 #'
 #' @examples
