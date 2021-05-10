@@ -1,4 +1,4 @@
-#' Documentation for package ‘jflp’ version 0.0.0.9000 to read in Form IV-9
+#' Documentation for package ‘jflp’ version 0.0.0.9000 to read in Table IV-9
 #'
 #' @param bureau_9
 #'
