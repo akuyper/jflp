@@ -15,7 +15,11 @@ In order to install package `jflp`, use the code below to install from Github:
 devtools::install_github("akuyper/jflp")
 ```
 
-This package requires downloading the excel file directly from the database onto your device. Direct access to Form IV-9 can be found on the Statistics of Japan database using this link: https://www.e-stat.go.jp/en/stat-search/files?page=1&query=Table%20IV-9%202019&layout=dataset&metadata=1&data=1. Direct access to form IV-7 can be found here: https://www.e-stat.go.jp/en/stat-search/files?page=1&query=table%20IV-7&layout=dataset&stat_infid=000032085217&metadata=1&data=1. Lastly, a link to all Basic Tabulations on relevant labor data from the Labor Force Survey, which are updated on a monthly basis, is: https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200531&tstat=000000110001&cycle=1&year=20180&month=24101211&tclass1=000001040276&tclass2=000001040283&tclass3=000001040284&result_back=1&cycle_facet=tclass1%3Atclass2%3Atclass3%3Acycle&tclass4val=0. For other relevant forms, this code can be recreated by altering column names, but for the purposes of the scope of my thesis research, I focus specifically on these two tables. 
+This package requires downloading the excel file directly from the database onto your device. Direct access to Form IV-9 can be found on the Statistics of Japan database using this link: https://www.e-stat.go.jp/en/stat-search/files?page=1&query=Table%20IV-9%202019&layout=dataset&metadata=1&data=1. 
+
+Direct access to form IV-7 can be found here: https://www.e-stat.go.jp/en/stat-search/files?page=1&query=table%20IV-7&layout=dataset&stat_infid=000032085217&metadata=1&data=1. 
+
+Lastly, a link to all Basic Tabulations on relevant labor data from the Labor Force Survey, which are updated on a monthly basis, is: https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200531&tstat=000000110001&cycle=1&year=20180&month=24101211&tclass1=000001040276&tclass2=000001040283&tclass3=000001040284&result_back=1&cycle_facet=tclass1%3Atclass2%3Atclass3%3Acycle&tclass4val=0. For other relevant forms, this code can be recreated by altering column names, but for the purposes of the scope of my thesis research, I focus specifically on these two tables. 
 
 ## Example
 
