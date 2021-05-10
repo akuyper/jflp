@@ -19,7 +19,7 @@ Direct access to Form IV-9 can be found on the Statistics of Japan database usin
 
 ## Example
 
-This is a basic example showing  how to solve a common problem when researching labor data in Japan: downloading an excel file that has Japanese government-specific formatting. It shows how to utilize the functions for each form from the Bureau database, namely forms IV-9 and IV-7, and begin making graphical visualizations. The example code downloads forms from the year 2019 and creates preliminary visualizations
+Below are basic examples showing how to utilize the functions from package `jflp` in order to solve a common problem when researching labor data in Japan: the excel files from the Japan Bureau database  have distinctive and troublesome formatting. The examples specifically utilize Forms IV-7 and IV-9 from the database and begin making preliminary graphical visualizations to illustrate the basic use of the functions. These specific examples are from the year 2019. 
 
 ``` r
 library(jflp)
